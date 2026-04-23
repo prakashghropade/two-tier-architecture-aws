@@ -5,6 +5,7 @@ module "secrets" {
     project_name = var.project_name
     environment = var.environment
     db_username = var.db_username
+    
 }
 
 # VPC Module
