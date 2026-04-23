@@ -18,6 +18,7 @@ resource "aws_instance" "web" {
 
     ami = data.aws_ami.ubuntu.id
     instance_type = var.instance_type
+    subnet_id = var.public_subnet_id
     vpc_security_group_ids = [var.web_security_group_id]
     associate_public_ip_address = true
 
