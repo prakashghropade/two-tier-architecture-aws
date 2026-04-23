@@ -41,6 +41,7 @@ resource "aws_security_group" "web" {
 resource "aws_security_group" "db" {
     name = "${var.project_name}-db-sg"
     description = "Security group for RDS - allow MYSQL from web server only"
+    vpc_id = var.vpc_id
 
     ingress {
         description = "MYSQL from web server"
