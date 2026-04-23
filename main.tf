@@ -5,7 +5,7 @@ module "secrets" {
     project_name = var.project_name
     environment = var.environment
     db_username = var.db_username
-    
+
 }
 
 # VPC Module
@@ -39,7 +39,7 @@ module "rds" {
     db_security_group_id = module.security_groups.db_sg_id
     db_name = var.db_name
     db_username = module.secrets.db_password
-    db_password = module.secrets.db_password
+    db_password = "prakashghorpade2001"
     instance_class = var.db_instance_class
     allocated_storage = var.db_allocated_storage
     engine_version = var.db_engine_version 
